@@ -24,13 +24,18 @@
   padding: 0;
 }
 
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 a {
@@ -349,6 +354,12 @@ input, select, textarea {
   overflow: hidden;
 }
 
+@media (max-width: 576px) {
+  .hero-banner {
+    padding: 16px;
+  }
+}
+
 .hero-banner::before {
   content: '';
   position: absolute;
@@ -479,6 +490,13 @@ input, select, textarea {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
 }
 
 /* Video Card Styling */
